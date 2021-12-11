@@ -1,0 +1,78 @@
+ *,*::before,*::after{
+	box-sizing: border-box;
+} 
+body{
+	/*background-image:url('wood.jpg') ;  */
+	background:black;
+	margin: 0;
+	height: 100vh;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  
+
+}
+.paino{
+	display: flex;
+}
+.key, .mainBlackKey{
+	height: calc(var(--width)*4);
+	width: var(--width);
+	box-shadow: inset 0px 0px 5px black;
+	border-radius:0 0 5px 5px;
+	font-size: 0px;
+
+}
+
+.key p{
+display: none;
+}
+.white{
+	--width: 90px;
+	height:350px;
+	background:white;
+	border: 1px solid #333;
+}
+.black{
+	--width: 60px;
+	height: 240px;
+	background: black;
+	margin-left: calc(var(--width)/-2);
+	margin-right: calc(var(--width)/-2);
+	z-index: 1;
+	border: 1px solid #333;
+	display: flex;
+	justify-content: center;
+
+}
+.innerBlack{
+	width: 40px;
+	height: 220px;
+	background:linear-gradient(grey, #000);
+	fill-color: transparent;
+	border-top-color:black ;
+	border: 1px solid grey;
+	border-radius:0 0 5px 5px;
+}
+.pressed{
+	box-shadow: 0 3px 4px 0 #dbedf3;
+	opacity: 0.5;
+}
+@media only screen and (max-width: 767px) {
+    .paino{
+    	transform: rotate(90deg);
+    }
+    .white{
+    	--width:62px;
+    	height:320px;
+
+    }
+    .black{
+    	--width:40px;
+    	height: 200px;
+    }
+    .innerBlack{
+    	width: 33px;
+    	height:185px;
+    }
+} 
