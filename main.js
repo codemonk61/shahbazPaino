@@ -23,7 +23,7 @@ function makeSound(key) {
 
 	switch (key) {
 			case 'a':
-				var paino1 =new Audio("wk1.wav");
+				var paino1 =new Audio("Wk1.wav");
 				paino1.play(); 
 				break;
 
